@@ -24,6 +24,7 @@ function emptyBasket(){
     <div class="empty_basket">
         <img class="empty_basket_pic" src="./assets/pics/bag.png" alt="">
         <div class="empty_basket_p_tag">
+        
         <p>Wähle leckere Gerichte aus der Karte und</p>
         <p>bestelle Dein Menü</p>
         </div>
@@ -85,6 +86,14 @@ function orderAlert(){
     return `
     <div class="order_alert">
         <p>Vielen Dank für deine Bestellung!</p>
+    </div>
+    `;
+}
+
+function orderMessage(){
+    return `
+    <div class="orderMessage" id="orderMessage">
+        <p><b>Bitte füge Produkte zum Warenkorb hinzu.</b></p>
     </div>
     `;
 }

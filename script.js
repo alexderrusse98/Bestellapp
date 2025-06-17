@@ -25,9 +25,8 @@ function renderBasket() {
     }
     if (basket.length < 1) {
         basketRef.innerHTML = basketHead() + emptyBasket();
-    } else {
-         showCosts(total,basketRef);
     }
+         showCosts(total,basketRef);
 }
 
 function showCosts(total, basketRef) {
@@ -37,9 +36,9 @@ function showCosts(total, basketRef) {
         delivery = deliveryCosts;
     }
 
-    let grandTotal = total + delivery;
+    let completeSum = total + delivery;
 
-    basketRef.innerHTML += costsTemplate(total, delivery, grandTotal);
+    basketRef.innerHTML += costsTemplate(total, delivery, completeSum);
 }
 
 function toggleDelivery(delivery) {
@@ -79,8 +78,19 @@ function removeMeal(index) {
 }
 
 function orders() {
-    basket = [];
     let basketRef = document.getElementById('basket');
+    if (basket.length === 0) {
+        basketRef.innerHTML = orderMessage();
+
+        setTimeout(() => {
+            renderBasket();
+        }, 2000);
+        
+        return;
+    }
+
+    basket = [];
+    
     basketRef.innerHTML = basketHead();
     basketRef.innerHTML += orderAlert();
 
@@ -88,6 +98,7 @@ function orders() {
         renderBasket();
     }, 3000);
 }
+
 
 function toggleBasketMenu(menuIcon) {
     menuIcon.classList.toggle("change");

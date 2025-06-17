@@ -52,9 +52,7 @@
     .basket_menu{
         justify-content: space-evenly;
     }
-    .total_costs,
-    .basket_footer,
-    .subtotal{
+    .basket_footer{
         padding-left: 8px;
     }
     .order_button{
