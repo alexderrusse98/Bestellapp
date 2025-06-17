@@ -30,13 +30,16 @@ function renderBasket() {
     }
 }
 
-function showCosts(total,basketRef ){
-    basketRef.innerHTML += `<div class="subtotal"><p>Zwischensumme:${shortPrice(total)}€</p></div>`;
+function showCosts(total, basketRef) {
+    let delivery = 0;
+
     if (isDelivery) {
-        basketRef.innerHTML += `<div class="total_costs"><p>Lieferkosten: ${shortPrice(deliveryCosts)}€</p></div>`;
-        total += deliveryCosts;
+        delivery = deliveryCosts;
     }
-    basketRef.innerHTML += costsTemplate(total);
+
+    let grandTotal = total + delivery;
+
+    basketRef.innerHTML += costsTemplate(total, delivery, grandTotal);
 }
 
 function toggleDelivery(delivery) {

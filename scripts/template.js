@@ -65,17 +65,18 @@ function getTemplateBasket(basketIndex) {
     `;
 }
 
-
-function costsTemplate(total) {
+function costsTemplate(subtotal, delivery, total) {
     return `
         <div class="basket_footer">
-            <p>Gesamt: ${shortPrice(total)}€</p>
-        </div>
-        
-        <div id="orderMessage"></div>
+            <div class="subtotal"><p>Zwischensumme: ${shortPrice(subtotal)}€</p></div>
+            ${delivery > 0 ? `<div class="total_costs"><p>Lieferkosten: ${shortPrice(delivery)}€</p></div>` : ''}
+            <div class="total_price"><p>Gesamt: ${shortPrice(total)}€</p></div>
 
-        <div class="order_button">
-            <button class="order" onclick="orders()"><b>Bestellen</b></button>
+            <div id="orderMessage"></div>
+
+            <div class="order_button">
+                <button class="order" onclick="orders()"><b>Bestellen</b></button>
+            </div>
         </div>
     `;
 }
