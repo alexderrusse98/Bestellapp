@@ -1,0 +1,23 @@
+header{
+    background-color: #e58422;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+}
+.head_navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.head_img_logo{
+    width: 100px;
+    object-fit: cover;
+}
+.meal_img1{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}

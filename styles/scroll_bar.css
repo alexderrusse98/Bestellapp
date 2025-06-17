@@ -1,0 +1,25 @@
+html::-webkit-scrollbar{
+    width: 12px;
+    color: #db750e;
+}
+html::-webkit-scrollbar-track {
+  background: white;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #e58422;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.basket_content::-webkit-scrollbar{
+    width: 8px;
+    color: #db750e;
+}
+.basket_content::-webkit-scrollbar-track {
+  background: white;
+}
+.basket_content::-webkit-scrollbar-thumb {
+  background-color: #e58422;
+  border-radius: 4px;
+  border: 2px solid white;
+}

@@ -1,0 +1,175 @@
+.basket_content {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 85%;
+  background: white;
+  transform: translateX(100%);
+  transition: 0.9s ease;
+  overflow-y: auto;
+  padding: 0 16px 16px 16px;
+  z-index: 5;
+  margin-top: 80px;
+  border: 1px solid;
+  box-shadow: 0px 0px 10px 0px black;
+  border-radius: 10px 0 0 10px;
+}
+.basket_content.open {
+  transform: translateX(0);
+}
+.basket_head{
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+}
+.basket_head{
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 8px;
+}
+.title_basket{
+    display: flex;
+    justify-content: center;
+}
+.deliver{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+}
+.deliver_pic{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+}
+.deliver:hover{
+    background-color: #e58422;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.collect{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 0;
+}
+.collect_pic{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+.collect:hover{
+    background-color: #e58422;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.basket_remove{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid transparent;
+    font-size: 30px;
+    color:  #e58422;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.basket_remove:hover{
+    border-color:  #e58422;     
+    background-color: transparent; 
+}
+.basket_add{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid transparent;
+    font-size: 30px;
+    color:  #e58422;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.basket_add:hover{
+    border-color:  #e58422;     
+  
+}
+.trash_pic{
+    height: 20px;
+    width: 20px;
+}
+.basket_delet{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid transparent;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.basket_delet:hover{
+    border-color:  #e58422;     
+    background-color: transparent; 
+}
+.basket_menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.order{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 0;
+    font-size: 24px;
+}
+.order:hover{
+    background-color: #e58422;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.order_button{
+    display: flex;
+    justify-content: center;
+}
+.empty_basket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #716b6b;
+    padding-top: 80px;
+    gap: 24px;
+}
+.empty_basket_pic{
+    height: 60px;
+    width: 60px;
+}
+.empty_basket_p_tag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+}
+.order_alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}

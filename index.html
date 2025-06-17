@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+ <html lang="de">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <script src="./scripts/object.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/template.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/mainMeals.css">
+    <link rel="stylesheet" href="./styles/beilagen.css">
+    <link rel="stylesheet" href="./styles/burgerMenu.css">
+    <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/basket_scrollBar.css">
+    <link rel="stylesheet" href="./styles/media_query.css">
+    <link rel="stylesheet" href="./styles/scroll_bar.css">
+    
+    <link rel="icon" href="./assets/icons/favicon-32x32.png">
+ </head>
+ <body onload="init()">
+    <div class="main_wrapper">
+<header>
+    <div class="head_navBar">
+            <div>
+                <img class="head_img_logo" src="./assets/pics/Logo.png" alt="">
+            </div>
+    
+            <div class="container" onclick="toggleBasketMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+    </div>
+</header>
+
+    <div>
+        <img class="meal_img1 " src="./assets/pics/meal2.jpg" alt="">
+    </div>
+    
+<main>
+
+    <section class="main_content">
+        <div>
+            <div>
+                <h1>Pizza Ingrid</h1>
+                <p class="stars">Bewertung (5 von 5 Sternen)</p>
+           
+                <div class="main_nav_bar">
+                    <p><i class="arrow right"></i></p>
+                    <a href="#Hauptgerichte"><b>Hauptgerichte</b></a>
+                    <a href="#Beilagen"><b>Beilagen</b></a>
+                </div>
+
+                <div>
+                    <img class="meal_img2" src="./assets/pics/meal1.jpg" alt="">
+                </div>
+            </div>
+
+            <h2 id="Hauptgerichte">Hauptgerichte</h2>
+           
+            <div>
+                <div id="content_Meals"></div>
+            </div>
+
+        </div>
+        
+        <div>
+            <img class="meal3" src="./assets/pics/meal3.jpg" alt="">
+        </div>
+
+        <div>
+                <h2 id="Beilagen">Beilagen</h2>
+            <div>
+                <p class="supplements">folgt in kürze</p>
+            </div>
+        </div>
+    </section> 
+
+    <section>  
+        <div>
+            <div id="basket" class="basket_content"></div>
+        </div>   
+    </section>
+</main>
+     
+<footer>
+
+</footer>
+</div>
+</body>
+</html>
