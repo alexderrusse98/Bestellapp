@@ -1,13 +1,14 @@
-html{
-    scroll-behavior: smooth;
-}
-body{
+html, body {
+    height: 100%;
     margin: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
- }
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Merienda", cursive;
+}
 h3{
     padding: 0 8px
+    
 }
 a{
     text-decoration: none;
@@ -19,14 +20,18 @@ a:hover{
     color: #db750e;
 }
 main{
-    width: 100%;
+    flex: 1;
 }
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    width: 100%;
+    margin: 0 auto;     
+}
+
 footer {
     width: 100%;
     height: 60px;
     background: #db750e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-

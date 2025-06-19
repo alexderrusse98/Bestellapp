@@ -3,7 +3,9 @@
 
 function init(){
     renderMeals();
+    updateBasketCount();
     renderBasket();
+
 }
 
  function renderMeals(){
@@ -27,6 +29,23 @@ function renderBasket() {
         basketRef.innerHTML = basketHead() + emptyBasket();
     }
          showCosts(total,basketRef);
+         
+}
+
+function updateBasketCount() {
+    let basketNumber = document.getElementById('basketCount');
+    let count = 0;
+    for (let i = 0; i < basket.length; i++) {
+        count += basket[i].amount;
+    }
+
+   if (count === 0) {
+        basketNumber.classList.add('display_none');
+    } else {
+        basketNumber.classList.remove('display_none');
+        basketNumber.innerText = count;
+    }
+    basketNumber.innerText = count;
 }
 
 function showCosts(total, basketRef) {
@@ -56,11 +75,13 @@ function moveMealFromMenu(mealIndex) {
         basket.push({ name, price, amount: 1 });
     }
     renderBasket();
+    updateBasketCount();
 }
 
 function addMealInBasket(basketIndex) {
     basket[basketIndex].amount++;
     renderBasket();
+    updateBasketCount();
 }
 
 function removeMeal(index) {
@@ -70,11 +91,13 @@ function removeMeal(index) {
         basket.splice(index, 1); 
     }
     renderBasket();
+    updateBasketCount();
 }
 
  function deleteMeal(index) {
     basket.splice(index, 1);
     renderBasket();
+    updateBasketCount();
 }
 
 function orders() {
@@ -93,12 +116,11 @@ function orders() {
     
     basketRef.innerHTML = basketHead();
     basketRef.innerHTML += orderAlert();
-
+    updateBasketCount();
     setTimeout(() => {
         renderBasket();
     }, 3000);
 }
-
 
 function toggleBasketMenu(menuIcon) {
     menuIcon.classList.toggle("change");

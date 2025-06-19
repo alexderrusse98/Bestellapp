@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./styles/scroll_bar.css">
 
     <link rel="icon" href="./assets/icons/favicon-32x32.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
  </head>
  <body onload="init()">
     <div class="main_wrapper">
@@ -25,11 +27,17 @@
             <div>
                 <img class="head_img_logo" src="./assets/pics/Logo.png" alt="">
             </div>
-    
-            <div class="container" onclick="toggleBasketMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+
+            <div class="head_left">
+                <div class="basketNumber" id="basketCount">
+                    
+                </div>
+
+                <div class="container" onclick="toggleBasketMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
     </div>
 </header>
